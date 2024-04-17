@@ -10,7 +10,7 @@ app.listen(4000, () => {
 });
 
 //carpeta publica
-app.use(express.static(__dirname + 'public'));
+app.use('/front', express.static(__dirname + '/public'));
 
 //ruta raiz
 app.get('/', (req, res) => {
