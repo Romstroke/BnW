@@ -23,17 +23,16 @@ app.use('/cargar', async (req, res) => {
     try {
         let imagen;
         // console.log(imagenUrl)
-        if(imagenUrl.substring(0,4) == 'http'){
-         imagen = await jimp.read(imagenUrl);
-        }else{
+        if (imagenUrl.substring(0, 4) == 'http') {
+            imagen = await jimp.read(imagenUrl);
+        } else {
             imagen = await jimp.read(__dirname + `/img/${imagenUrl}`); //dinamico 
         }
-        // await jimp.read('', (err, img) => {
+
         imagen
             .resize(350, jimp.AUTO) //tamaño
             .greyscale() //grises
             .writeAsync(`procesadas/${uuidv4().slice(0, 6)}.jpeg`)
-        // });
         // Convertir la imagen a buffer
         imagen.getBuffer(jimp.MIME_JPEG, (err, buffer) => {
             if (err) {
@@ -50,7 +49,13 @@ app.use('/cargar', async (req, res) => {
         // res.setHeader('Content-Type', 'image/jpeg')
     } catch (error) {
         // Manejar errores
-        console.error('Error al procesar la imagen:', error);
-        res.status(500).send('Error interno del servidor');
+        console.log(error)
+        if (error.code == 'ENOENT') {
+            res.status(500).send('Error, nombre de archivo local inválido')
+        } else {
+
+            res.status(500).send('Error interno del servidor');
+        }
+        // console.error('Error al procesar la imagen:', error);
     }
 });
