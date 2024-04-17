@@ -3,18 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta author="Nadales Valenzuela Spa">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="front/style.css">
-    <title>Desafio Black and White</title>
+    <title>Conviértete</title>
 </head>
 
 <body>
     <h1>Black and White Spa</h1>
-    <form action="/cargar">
+    <form action="/cargar" id="formulario">
         <h2>Imagen URL:</h2>
-        <input type="text">
-        <button>Subir imagen al servidor</button>
+        <input type="text" name="url">
+        <button type="submit">Subir imagen al servidor</button>
+        <div id="resp"></div>
     </form>
+    <script src="front/front.js"></script>
 </body>
 
 </html>
