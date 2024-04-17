@@ -20,9 +20,18 @@ Sin embargo, en producción, se recomienda utilizar los puertos estándar como e
 
 ### Instalación 🔧
 
-```npm i
+paso 1: desde tu terminal de GitBash:
+
+```bash
+git clone https://github.com/Romstroke/listanimal.git
 ```
-```nodemon index.js
+Paso 2: Desde la carpeta del proyecto:
+
+```bash
+npm i
+```
+```bash
+nodemon index.js
 ```
 ## Autores ✒️
 
