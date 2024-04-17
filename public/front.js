@@ -7,4 +7,5 @@ formulario.addEventListener('submit', (e) => {
         e.preventDefault();
         resp.innerHTML = 'Debes rellenar el campo!!!';
     }
+    //VALIDAR QUE SEA UNA URL O UN ARCHIVO LOCAL VALIDO
 });

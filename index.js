@@ -24,7 +24,7 @@ app.use('/cargar', async (req, res) => {
         let imagen;
         // console.log(imagenUrl)
         if(imagenUrl.substring(0,4) == 'http'){
-         imagen = await jimp.read(imagenUrl); //dinamico
+         imagen = await jimp.read(imagenUrl);
         }else{
             imagen = await jimp.read(__dirname + `/img/${imagenUrl}`); //dinamico 
         }

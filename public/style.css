@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -5,7 +7,8 @@
 }
 
 body{
-    background-color: gray;
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(37, 37, 37);
     color: aliceblue;
 }
 
@@ -13,24 +16,46 @@ h1{
     margin: 5% 5%;
 }
 
+h2 {
+    margin-bottom: 2%;
+    font-size: 27px;
+}
+
 form {
-    margin: 5%;
-    width: 20%;
+    margin-left: 10%;
+    width: 70%;
 }
 
 input {
-    font-size: 25px;
+    font-size: 20px;
+    width: 100%;
+    padding: 20px;
+    height: 50px;
     display: block;
     border-radius: 10px;
 }
 
 button {
     margin: 10px;
-    padding: 20px;
-    font-size: 20px;
-    width: 90%;
+    padding: 15px;
+    font-size: 25px;
     background-color: black;
     color: aliceblue;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 2px solid aliceblue;
+}
+
+#resp {
+    padding-left: 5%;
+    font-size: 20px;
+    color: tomato;
+}
+
+@media (min-width: 580px){
+    form {
+        width: 40%;
+    }
+    input{
+        width: 50%;
+    }
 }
