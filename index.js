@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 //ruta cargar
 app.use('/cargar', async (req, res) => {
     try {
-        const imagen = await jimp.read('https://www.psicoactiva.com/wp-content/uploads/2021/07/ilusion-optica-esferas-colores.jpg');
+        const imagen = await jimp.read(__dirname + '/color.jpg');
         // await jimp.read('', (err, img) => {
         imagen
             .resize(350, jimp.AUTO) //tamaño
