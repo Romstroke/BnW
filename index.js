@@ -25,7 +25,7 @@ app.use('/cargar', async (req, res) => {
         imagen
             .resize(350, jimp.AUTO) //tamaño
             .greyscale() //grises
-            .writeAsync(`${uuidv4().slice(0, 6)}.jpg`)
+            .writeAsync(`${uuidv4().slice(0, 6)}.jpeg`)
         // });
         // Convertir la imagen a buffer
         imagen.getBuffer(jimp.MIME_JPEG, (err, buffer) => {
